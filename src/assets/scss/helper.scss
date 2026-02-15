@@ -1,0 +1,411 @@
+@import "./variable.scss";
+
+@for $i from 0 through 100 {
+  .font-#{$i} {
+    font-size: $i * 1px;
+    &.light-text {
+      font-weight: 300;
+    }
+    &.regular-text {
+      font-weight: 400;
+    }
+    &.normal-text {
+      font-weight: 500;
+    }
+    &.semi-bold-text {
+      font-weight: 600;
+    }
+    &.bold-text {
+      font-weight: 700;
+    }
+    &.extra-bold-text {
+      font-weight: 800;
+    }
+  }
+  .lh-#{$i} {
+    line-height: $i * 1px;
+  }
+}
+@each $key, $value in $colors {
+  .#{$key} {
+    background: $value;
+    background-color: $value;
+  }
+  .#{$key}--border{
+    border-color: $value !important;
+  }
+  .#{$key}--text {
+    color: $value;
+  }
+}
+
+@for $i from 0 through 100 {
+  .pa#{$i} {
+    padding: $i + px;
+  }
+  .pl#{$i} {
+    padding-left: $i + px;
+  }
+  .pt#{$i} {
+    padding-top: $i + px;
+  }
+  .pb#{$i} {
+    padding-bottom: $i + px;
+  }
+  .pr#{$i} {
+    padding-right: $i + px;
+  }
+  .px#{$i} {
+    padding-left: $i + px;
+    padding-right: $i + px;
+  }
+  .py#{$i} {
+    padding-top: $i + px;
+    padding-bottom: $i + px;
+  }
+  .ma#{$i} {
+    margin: $i + px;
+  }
+  .mt#{$i} {
+    margin-top: $i + px;
+  }
+  .mb#{$i} {
+    margin-bottom: $i + px;
+  }
+  .ml#{$i} {
+    margin-left: $i + px;
+  }
+  .mr#{$i} {
+    margin-right: $i + px;
+  }
+  .mx#{$i} {
+    margin-left: $i + px;
+    margin-right: $i + px;
+  }
+  .my#{$i} {
+    margin-top: $i + px;
+    margin-bottom: $i + px;
+  }
+  .br#{$i} {
+    border-radius: $i + px;
+  }
+  .border#{$i} {
+    border: $i + px solid;
+  }
+  .gap#{$i} {
+    gap: $i + px;
+  }
+}
+
+.mlr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.-mx-15 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.-mx-10 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.-mx-20 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.border-none {
+  border: 0 !important;
+}
+.line-normal {
+  line-height: normal;
+}
+.vert-middle {
+  vertical-align: middle;
+}
+.vert-baseline {
+  vertical-align: baseline;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.full-height {
+  height: 100vh;
+}
+.fill-width {
+  width: 100% !important;
+}
+.fill-height {
+  height: 100% !important;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hide {
+  overflow: hidden;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-help {
+  cursor: help;
+}
+.with-transition {
+  transition: all 0.3s ease-in;
+}
+.hover-border {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.font-italic {
+  font-style: italic;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.no-box-shadow {
+  box-shadow: none !important;
+}
+.border-right {
+  border-right: 1px solid #707380;
+}
+.border-left {
+  border-left: 1px solid #707380;
+}
+.-mx-15 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.inline-block{
+  display: inline-block
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.flex-auto {
+  flex: 1 1 auto;
+}
+.flex-initial {
+  flex: 0 1 auto;
+}
+.flex-none {
+  flex: none;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-grow-0 {
+  flex-grow: 0;
+}
+.flex-shrink {
+  flex-shrink: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.justify-items-auto {
+  justify-items: auto;
+}
+.justify-items-start {
+  justify-items: start;
+}
+.justify-items-end {
+  justify-items: end;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.justify-items-stretch {
+  justify-items: stretch;
+}
+.justify-self-auto {
+  justify-self: auto;
+}
+.justify-self-start {
+  justify-self: start;
+}
+.justify-self-end {
+  justify-self: end;
+}
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-stretch {
+  justify-self: stretch;
+}
+.content-start {
+  align-content: flex-start;
+}
+.content-center {
+  align-content: center;
+}
+.content-end {
+  align-content: flex-end;
+}
+.content-between {
+  align-content: space-between;
+}
+.content-around {
+  align-content: space-around;
+}
+.content-evenly {
+  align-content: space-evenly;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.self-auto {
+  align-self: auto;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+.self-stretch {
+  align-self: stretch;
+}
+
+.Toastify__toast--success {
+  background-color: #27c24c !important;
+}
+.Toastify__toast--warning {
+  background-color: #f9cf0d !important;
+}
+.Toastify__toast--error {
+  background-color: #e6443c !important;
+}
+.hidden {
+  display: none;
+}
+.word-break {
+  word-break: break-all;
+}
+.full-width {
+  width: 100%;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.sticky-header-res {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @media (max-width: 991.98px) {
+    position: relative;
+    z-index: 0;
+  }
+}
+.sticky-sidebar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.sider {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.mb-0{
+  margin-bottom: 0 !important;
+}
+
+//antd override css
+.ant-spin-spinning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 65px);
+}
+.z-99{
+  z-index: 99 !important;
+}
